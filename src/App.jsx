@@ -17,9 +17,9 @@ import "./App.css";
 // ✅ https://api.adviceslip.com/advice
 // ✅ Call the API and show the ID and advice back to the user
 
-// Weather API
-// https://api.open-meteo.com/v1/forecast?latitude=37.77&longitude=-122.42&current_weather=true
-// Call the API and show the current temerature and current windspeed back to the user
+// ✅ Weather API
+// ✅ https://api.open-meteo.com/v1/forecast?latitude=37.77&longitude=-122.42&current_weather=true
+// ✅ Call the API and show the current temerature and current windspeed back to the user
 
 import "./App.css";
 import { useEffect, useState } from "react";
