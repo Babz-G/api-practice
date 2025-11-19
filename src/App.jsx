@@ -36,42 +36,42 @@ function App() {
     )
       .then((res) => res.json())
       .then((data) => {
-        setBooks(data.items);
+        setBooks(data.items || []);
       })
       .catch((err) => console.log("Error fetching data:", err));
   }, []);
 
-  useEffect(() => {
-    fetch(
-      "https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=20338fa1b5fd42f789f00d697c05fbb1"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setNews(data.articles);
-      })
-      .catch((err) => console.log("Error fetching data:", err));
-  }, []);
+  // useEffect(() => {
+  //   fetch(
+  //     "https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=20338fa1b5fd42f789f00d697c05fbb1"
+  //   )
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setNews(data.articles);
+  //     })
+  //     .catch((err) => console.log("Error fetching data:", err));
+  // }, []);
 
-  useEffect(() => {
-    fetch("https://api.adviceslip.com/advice")
-      .then((res) => res.json())
-      .then((data) => {
-        setSlip(data.slip);
-      })
-      .catch((err) => console.log("Error fetching data:", err));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://api.adviceslip.com/advice")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setSlip(data.slip);
+  //     })
+  //     .catch((err) => console.log("Error fetching data:", err));
+  // }, []);
 
-  useEffect(() => {
-    fetch(
-      "https://api.open-meteo.com/v1/forecast?latitude=37.77&longitude=-122.42&current_weather=true"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setWeather(data.current_weather);
-      })
-      .catch((err) => console.log("Error fetching data:", err));
-  }, []);
+  // useEffect(() => {
+  //   fetch(
+  //     "https://api.open-meteo.com/v1/forecast?latitude=37.77&longitude=-122.42&current_weather=true"
+  //   )
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //       setWeather(data.current_weather);
+  //     })
+  //     .catch((err) => console.log("Error fetching data:", err));
+  // }, []);
 
   return (
     <div className="app">
