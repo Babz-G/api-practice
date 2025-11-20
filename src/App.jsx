@@ -89,7 +89,7 @@ function App() {
         ))}
       </div>
 
-      <h1>Articles</h1>
+      <h1>News</h1>
       <div className="card-container">
         {news.map((article) => (
           <div className="card" key={article.url}>
@@ -137,5 +137,3 @@ function App() {
 }
 
 export default App;
-
-// ** Trying to repush so Im adding a comment to save, derp
